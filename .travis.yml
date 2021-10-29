@@ -4,7 +4,7 @@ service:
   - docker
 
 before_install:
-  - docker build -t gabri/docker-react -f Dockerfile.dev .
+  - docker build -t gabri/docker-react .
 
 script:
   - docker run -p 3000:3000 -e CI=true gabri/docker-react npm run test
